@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const { Temperature } = require('../node_modules/npm-temperatures-tdd/src/Temperatures');
 const readline = require('readline');
 
@@ -8,7 +10,7 @@ const cI = readline.createInterface({
 
 cI.question("Introduce la temperatura y a cual otra la quieres convertir, ej: 25 K to C \n", function(answer){
     var myArray = answer.split(' ');
-    var num = myArray[0];
+    var num = parseFloat(myArray[0]);
     var scale = myArray[1];
     var parseScale = myArray[3];
 
